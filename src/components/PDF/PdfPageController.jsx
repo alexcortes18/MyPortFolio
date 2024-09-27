@@ -2,6 +2,7 @@ export default function PdfPageController({ pageNumber, numPages, setPageNumber,
     return (
         <>
             <div>
+                
                 <button className="page-control-button"
                     disabled={pageNumber <= 1}
                     onClick={() => setPageNumber(pageNumber - 1)}
