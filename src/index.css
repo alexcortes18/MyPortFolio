@@ -1,30 +1,26 @@
 /*------------------------------------------------------  Main Page ------------------------------------------------------*/
-
 .main-page {
   display: flex;
   flex-direction: row;
+  height: 135vh;
   /* gap: 10px; */
 }
 
-.main-content{
+.main-content {
   margin: 20px;
   border-radius: 20px;
-  background-color: #f0f0f0;
   flex-grow: 1;
 }
-
 
 /*------------------------------------------------------  Sidebar ------------------------------------------------------*/
 .sidebar {
   width: 33.333%;
-  height: 100vh;
+  height: auto;
   padding: 4rem 2rem;
   background-color: #292524;
   color: #f5f5f4;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  /* margin-right: 10rem; */
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +41,6 @@
 }
 
 /*------------------------------------------------------  Profile Picture ------------------------------------------------------*/
-
 .profile-picture {
   width: 200px;
   height: 200px;
@@ -54,8 +49,6 @@
   margin-bottom: 2rem;
   align-items: center;
 }
-
-
 
 /*------------------------------------------------------  Sidebar Buttons ------------------------------------------------------*/
 
@@ -78,4 +71,30 @@
 .sidebar-button:hover {
   background-color: #57534e;
   color: #f5f5f4;
+}
+
+/*------------------------------------------------------  PDF ------------------------------------------------------*/
+.pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -70px;
+}
+
+.pdf .page-control-button {
+  background-color: #57705b7b;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 10rem;
+}
+
+.pdf .page-control-button:hover {
+  background-color: #00b342a4;
+
 }
