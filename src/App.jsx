@@ -1,11 +1,8 @@
-import { useContext } from "react";
 import SideBar from "./components/SideBar";
 import {PortfolioContextProvider} from "./store/PortfolioContext";
 import Content from "./components/Content";
 
 function App() {
-
-
   return (
     <>
       <PortfolioContextProvider>
@@ -19,5 +16,4 @@ function App() {
     </>
   )
 }
-
 export default App;
