@@ -12,34 +12,31 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function PDFViewer({pdfLocation}) {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
-    const [scale, setScale] = useState(2); // State to manage zoom level
+    const [scale, setScale] = useState(2.25); // State to manage zoom level
 
     // Correctly destructure the argument to get numPages
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
     }
-
     return (
         <div className="pdf">
             {/* <PdfPageController pageNumber={pageNumber} numPages={numPages} setPageNumber={setPageNumber}></PdfPageController> */}
+            <div>
+                <label htmlFor="zoom">Zoom:</label>
+                <input
+                    id="zoom"
+                    type="range"
+                    min="1.75"
+                    max="2.75"
+                    step="0.05"
+                    value={scale}
+                    onChange={(e) => setScale(Number(e.target.value))}
+                />
+            </div>
             <Document file={pdfLocation} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} scale={scale} />
             </Document>
             <PdfPageController isPageNumber={true} pageNumber={pageNumber} numPages={numPages} setPageNumber={setPageNumber}></PdfPageController>
-            
-            {/* <div>
-                <label htmlFor="zoom">Zoom:</label>
-                <select
-                    id="zoom"
-                    value={scale}
-                    onChange={(e) => setScale(Number(e.target.value))}
-                >
-                    <option value={0.5}>50%</option>
-                    <option value={1}>100%</option>
-                    <option value={1.5}>150%</option>
-                    <option value={2}>200%</option>
-                </select>
-            </div> */}
         </div>
     );
 }
