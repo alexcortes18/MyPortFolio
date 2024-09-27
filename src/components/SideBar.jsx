@@ -1,5 +1,5 @@
 import Button from "./UI/Button"
-import AlexProfilePic from "../assets/Alex.jpg"
+import AlexProfilePic from "../assets/Alex_2022.jpg"
 import { buttonData } from "../data/button_data"
 import { useContext } from "react"
 import PortfolioContext from "../store/PortfolioContext"
