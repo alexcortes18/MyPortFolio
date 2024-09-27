@@ -1,5 +1,6 @@
 import PortfolioContext from "../store/PortfolioContext";
 import { useContext } from "react";
+import PDFViewer from "./PDFViewer";
 
 export default function Content() {
   const portfolioCtx = useContext(PortfolioContext);
@@ -12,7 +13,7 @@ export default function Content() {
     content = (
       <>
         <h2>Main content. Here will be the CV.</h2>
-        {/* <PDFViewer></PDFViewer> */}
+        <PDFViewer></PDFViewer>
       </>
     );
   } else if (portfolioCtx.portfolio === 1) {
