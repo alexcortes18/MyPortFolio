@@ -3,6 +3,7 @@ import { useContext } from "react";
 import PDFViewer from "./PDF/PDFViewer";
 
 import myPdfFile from "../assets/AlexCortesCV2024.pdf";
+import CoverLetter from "./CoverLetter";
 
 export default function Content() {
   const portfolioCtx = useContext(PortfolioContext);
@@ -14,12 +15,17 @@ export default function Content() {
   if (portfolioCtx.portfolio === 0) {
     content = (
       <>
-        {/* <h2>Main content. Here will be the CV.</h2> */}
         <PDFViewer pdfLocation={myPdfFile}></PDFViewer>
       </>
     );
   } else if (portfolioCtx.portfolio === 1) {
-    content = <h2>Cover letter</h2>;
+    content = (
+      <>
+        <div className="cover-letter-container">
+          <CoverLetter></CoverLetter>
+        </div>
+      </>
+    );
   } else if (portfolioCtx.portfolio === 2) {
     content = <h2>About Me.</h2>;
   } else if (portfolioCtx.portfolio === 3) {

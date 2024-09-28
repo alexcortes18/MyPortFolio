@@ -13,7 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function PDFViewer({ pdfLocation }) {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
-    const [scale, setScale] = useState(1.75); // State to manage zoom level
+    const [scale, setScale] = useState(1.8); // State to manage zoom level
 
     // Correctly destructure the argument to get numPages
     function onDocumentLoadSuccess({ numPages }) {

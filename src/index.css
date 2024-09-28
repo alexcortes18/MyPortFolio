@@ -2,8 +2,7 @@
 .main-page {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  /* gap: 10px; */
+  height: 99vh;
 }
 
 .main-content {
@@ -15,7 +14,7 @@
 
 /*------------------------------------------------------  Sidebar ------------------------------------------------------*/
 .sidebar {
-  width: 33.333%;
+  /* width: 33.333%; */
   height: auto;
   padding: 4rem 2rem;
   background-color: #292524;
@@ -66,11 +65,9 @@
   margin-bottom: 2rem;
   border-radius: 5px;
   border: none;
-  /* background-color: #44403c; */
   background-color: #57705b47;
-  transition: background-color 0.3s ease;
-  /* color: #a8a29e; */
   color: rgb(255, 255, 255);
+  transition: background-color 0.3s ease;
 }
 
 .sidebar-button:hover {
@@ -83,7 +80,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-top: -70px; */
+  margin-top: -70px;
   height: 100%;
   overflow-y: auto;
 }
@@ -103,4 +100,30 @@
 
 .pdf .page-control-button:hover {
   background-color: #00b342a4;
+}
+
+/*-------------------------------------------------------  Cover Letter -----------------------------------------------*/
+.cover-letter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99vh;
+}
+
+.cover-letter {
+  padding: 20px;
+  margin-top: -50px;
+  max-width: 1200px;
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}
+
+.cover-letter p {
+  margin-bottom: 1em;
 }
