@@ -1,9 +1,10 @@
-import PortfolioContext from "../store/PortfolioContext";
+import PortfolioContext from "../../store/PortfolioContext";
 import { useContext } from "react";
-import PDFViewer from "./PDF/PDFViewer";
-
-import myPdfFile from "../assets/AlexCortesCV2024.pdf";
+import PDFViewer from "../PDF/PDFViewer";
 import CoverLetter from "./CoverLetter";
+
+import AlexCortesCV from "../../assets/AlexCortesCV2024.pdf";
+import Courses from "./Courses";
 
 export default function Content() {
   const portfolioCtx = useContext(PortfolioContext);
@@ -15,7 +16,12 @@ export default function Content() {
   if (portfolioCtx.portfolio === 0) {
     content = (
       <>
-        <PDFViewer pdfLocation={myPdfFile}></PDFViewer>
+        <PDFViewer
+          pdfLocation={AlexCortesCV}
+          initialScale={2}
+          cssClass={"pdf"}
+        >
+        </PDFViewer>
       </>
     );
   } else if (portfolioCtx.portfolio === 1) {
@@ -29,7 +35,11 @@ export default function Content() {
   } else if (portfolioCtx.portfolio === 2) {
     content = <h2>About Me.</h2>;
   } else if (portfolioCtx.portfolio === 3) {
-    content = <h2>Courses</h2>;
+    content = (
+      <>
+        <Courses></Courses>;
+      </>
+    );
   } else if (portfolioCtx.portfolio === 4) {
     content = <h2>Life in Taiwan</h2>;
   } else if (portfolioCtx.portfolio === 5) {

@@ -1,6 +1,6 @@
 import SideBar from "./components/SideBar";
 import {PortfolioContextProvider} from "./store/PortfolioContext";
-import Content from "./components/Content";
+import Content from "./components/Contents/Content.jsx";
 
 function App() {
   return (
