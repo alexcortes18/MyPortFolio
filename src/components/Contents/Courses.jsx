@@ -12,7 +12,7 @@ export default function Courses() {
                 <h2>Recent Courses:</h2>
                 <MultiPDFViewer
                     pdfFiles={[DeepLearningCertificate, JavascriptBasics, AngularBasics]}
-                    initialScale={0.7}
+                    initialScale={0.5}
                     cssClass={"pdf pdfscaling"}
                 >
                 </MultiPDFViewer>

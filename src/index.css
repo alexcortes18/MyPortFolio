@@ -2,15 +2,16 @@
 .main-page {
   display: flex;
   flex-direction: row;
-  height: 99vh;
+  height: 95vh;
 }
 
 .main-content {
-  margin: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   border-radius: 20px;
   flex-grow: 1;
   height: 100%;
-  /* overflow: hidden; */
 }
 
 /*------------------------------------------------------  Sidebar ------------------------------------------------------*/
@@ -61,7 +62,7 @@
 
 .sidebar-button {
   width: 275px;
-  height: 50px;
+  height: 40px;
   font-size: 1rem;
   margin-bottom: 2rem;
   border-radius: 5px;
@@ -88,7 +89,6 @@
 }
 
 .pdfscaling {
-  /* transform: scale(0.8); */
   padding-top: 3rem;
   transform-origin: top left;
   max-height: 100%;
@@ -119,24 +119,23 @@
   align-items: center;
 
   width: 99%;
-  /* max-height: 99vh; */
-  overflow-y: auto;
+  height:99%;
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f4f4f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .cover-letter {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center; */
 
   padding-left: 20px;
   padding-right: 20px;
-  height: 95vh;
+  max-height: 99%;
+  overflow-y: auto;
   font-family: 'Georgia', serif;
   font-size: 20px;
   line-height: 1.6;

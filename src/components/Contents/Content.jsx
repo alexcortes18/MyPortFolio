@@ -18,7 +18,7 @@ export default function Content() {
       <>
         <PDFViewer
           pdfLocation={AlexCortesCV}
-          initialScale={2}
+          initialScale={1.5}
           cssClass={"pdf"}
         >
         </PDFViewer>
