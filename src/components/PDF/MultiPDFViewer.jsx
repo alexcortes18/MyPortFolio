@@ -11,12 +11,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 export default function MultiPDFViewer({ pdfFiles, initialScale, cssClass }) {
     const [currentPdfIndex, setCurrentPdfIndex] = useState(0);
-    const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [scale, setScale] = useState(initialScale);
 
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
+    function onDocumentLoadSuccess() {
         setPageNumber(1); // Reset to the first page of the new PDF
     }
 

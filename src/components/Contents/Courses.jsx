@@ -7,11 +7,16 @@ import AngularBasics from "../../assets/Angular_Basics.pdf";
 
 export default function Courses() {
     return (
-        <MultiPDFViewer
-            pdfFiles={[DeepLearningCertificate, JavascriptBasics, AngularBasics]}
-            initialScale={0.7}
-            cssClass={"pdf pdfscaling"}
-        >
-        </MultiPDFViewer>
+        <>
+            <div className="courses">
+                <h2>Recent Courses:</h2>
+                <MultiPDFViewer
+                    pdfFiles={[DeepLearningCertificate, JavascriptBasics, AngularBasics]}
+                    initialScale={0.7}
+                    cssClass={"pdf pdfscaling"}
+                >
+                </MultiPDFViewer>
+            </div>
+        </>
     );
 }
