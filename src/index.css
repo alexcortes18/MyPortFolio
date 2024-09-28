@@ -107,23 +107,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 99vh;
+  
+  width: 99%;
+  /* max-height: 99vh; */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f4f4f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .cover-letter {
-  padding: 20px;
-  margin-top: -50px;
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 95vh;
   font-family: 'Georgia', serif;
   font-size: 20px;
   line-height: 1.6;
-  background-color: #f4f4f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   white-space: pre-wrap;
-}
-
-.cover-letter p {
-  margin-bottom: 1em;
 }
